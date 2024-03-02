@@ -1,0 +1,15 @@
+.box{
+    border: 5px solid;
+    font-size: 5em;
+    width: 250px;
+    height: 250px;
+    box-shadow: 3px 3px 3px ;
+}
+#box1{
+    background-color: palevioletred;
+    margin-left: auto;
+}
+#box2{
+    background-color: lightgreen;
+    margin-top: 10px
+}
