@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>
+        forms
+    </title>
+    <link rel="icon" type="image/png" href="images/favicont.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: blanchedalmond;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #reset {
+            color: white;
+            background-color: palevioletred;
+            margin: 20px;
+        }
+
+        #submit {
+            color: white;
+            background-color: palevioletred;
+            margin: 20px;
+        }
+
+        #space {
+            background-color: blanchedalmond;
+            width: 25px;
+        }
+
+        form {
+            margin: 10px;
+        }
+
+        label {
+            margin: 5px;
+        }
+
+        input {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://dekuu72.github.io" target="_blank">
+        <button style="font-size: 25px; background-color: grey; color: lightblue; border-radius: 20px;">click
+            me</button>
+    </a>
+
+    <br>
+
+    <form action="forms.php" method="POST" enctype="multipart/form-data">
+        <!--get - na koncu doda dane z tego formularza-->
+        <!--post - moge sie bawic zmiennymi-->
+
+        <label for="username">username:</label>
+        <input type="text" placeholder="johndoe" id="username" minlength="4" maxlenght="15" required>
+
+        <br>
+
+        <label for="password">password:</label>
+        <input type="password" id="password"> <br>
+
+        <label for="email">email:</label>
+        <input type="email" id="email" placeholder="john.doe@deku.com"><br>
+
+        <label for="phone">phone #:</label>
+        <input type="tel" id="phone" placeholder="123-456-789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"><br>
+
+        <label for="bday">birthdate:</label>
+        <input type="date" id="bday"><br>
+
+        <label for="quantity">quantity:</label>
+        <input type="number" id="quantity" min="0" max="99"><br>
+
+        <label for="title">title:</label>
+
+        <input type="radio" id="Mr." value="Mr." name="title">
+        <label for="Mr.">Mr.</label>
+        <input type="radio" id="Mrs." value="Mrs." name="title">
+        <label for="Mrs.">Mrs.</label>
+        <input type="radio" id="PhD." value="PhD." name="title">
+        <label for="PhD.">PhD.</label>
+        <br>
+
+
+        <label for="payment">payment</label>
+        <select id="payment">
+            <option></option>
+            <option value="visa">Visa</option>
+            <option value="mastercard">Mastercard</option>
+            <option value="giftcard">Gift Card</option>
+        </select>
+        <br>
+
+        <label for="subscribe">subscribe:</label>
+        <input type="checkbox" id="subscribe"><br>
+
+        <label for="comment">comment:</label>
+        <textarea id="comment" rows="3" cols="25"></textarea><br>
+
+        <label for="file" style="margin: 10px;">file:</label>
+        <input type="file" id="file" accept="image/png, image/jpeg" style="margin: 10px;">
+
+        <br>
+        <div style="display: flex;">
+            <div style="background-color: palevioletred; border-radius: 35px; border: 2px solid; cursor: pointer;">
+                <input type="submit" id="submit" style="font-size: 20px; border: none;">
+            </div>
+            <div id="space"> </div>
+            <div style="background-color: palevioletred; border-radius: 35px; border: 2px solid; cursor: pointer;">
+                <input type="reset" id="reset" style="font-size: 20px; border: none;"><br>
+            </div>
+        </div>
+
+
+    </form>
+
+</body>
+
+</html>
